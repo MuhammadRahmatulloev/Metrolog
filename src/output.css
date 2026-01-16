@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-teal-50: oklch(98.4% 0.014 180.72);
     --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-bold: 700;
@@ -173,6 +172,9 @@
   .flex {
     display: flex;
   }
+  .hidden {
+    display: none;
+  }
   .table {
     display: table;
   }
@@ -182,11 +184,20 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .h-36 {
+    height: calc(var(--spacing) * 36);
+  }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
   .h-50 {
     height: calc(var(--spacing) * 50);
   }
   .h-65 {
     height: calc(var(--spacing) * 65);
+  }
+  .h-145 {
+    height: calc(var(--spacing) * 145);
   }
   .h-420 {
     height: calc(var(--spacing) * 420);
@@ -194,17 +205,26 @@
   .h-\[95\%\] {
     height: 95%;
   }
+  .h-\[145px\] {
+    height: 145px;
+  }
   .h-full {
     height: 100%;
+  }
+  .w-\[32\%\] {
+    width: 32%;
+  }
+  .w-\[48\%\] {
+    width: 48%;
   }
   .w-\[50\%\] {
     width: 50%;
   }
+  .w-\[50\] {
+    width: 50;
+  }
   .w-\[70\%\] {
     width: 70%;
-  }
-  .w-\[80\%\] {
-    width: 80%;
   }
   .w-full {
     width: 100%;
@@ -238,9 +258,6 @@
   }
   .justify-evenly {
     justify-content: space-evenly;
-  }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -346,9 +363,34 @@
       bottom: calc(var(--spacing) * 7.5);
     }
   }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
+  .md\:w-\[32\%\] {
+    @media (width >= 48rem) {
+      width: 32%;
+    }
+  }
+  .md\:w-\[32\] {
+    @media (width >= 48rem) {
+      width: 32;
+    }
+  }
   .md\:w-\[50\%\] {
     @media (width >= 48rem) {
       width: 50%;
+    }
+  }
+  .md\:w-\[70\%\] {
+    @media (width >= 48rem) {
+      width: 70%;
     }
   }
   .md\:w-\[80\%\] {
@@ -446,6 +488,11 @@
       height: calc(var(--spacing) * 300);
     }
   }
+  .lg\:w-\[15\%\] {
+    @media (width >= 64rem) {
+      width: 15%;
+    }
+  }
   .lg\:w-\[32\%\] {
     @media (width >= 64rem) {
       width: 32%;
@@ -459,6 +506,16 @@
   .lg\:w-\[60\%\] {
     @media (width >= 64rem) {
       width: 60%;
+    }
+  }
+  .lg\:w-\[70\%\] {
+    @media (width >= 64rem) {
+      width: 70%;
+    }
+  }
+  .lg\:w-\[75\%\] {
+    @media (width >= 64rem) {
+      width: 75%;
     }
   }
   .lg\:w-full {
@@ -496,9 +553,14 @@
       justify-content: space-between;
     }
   }
-  .lg\:gap-0 {
+  .lg\:justify-center {
     @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 0);
+      justify-content: center;
+    }
+  }
+  .lg\:gap-5 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 5);
     }
   }
   .lg\:gap-10 {
@@ -506,14 +568,14 @@
       gap: calc(var(--spacing) * 10);
     }
   }
-  .lg\:gap-15 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 15);
-    }
-  }
   .lg\:gap-20 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:self-center {
+    @media (width >= 64rem) {
+      align-self: center;
     }
   }
   .lg\:self-start {
@@ -531,9 +593,9 @@
       font-size: 22px;
     }
   }
-  .lg\:text-\[24px\] {
+  .lg\:text-\[25px\] {
     @media (width >= 64rem) {
-      font-size: 24px;
+      font-size: 25px;
     }
   }
   .lg\:text-\[35px\] {
