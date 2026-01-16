@@ -178,6 +178,9 @@
   .table {
     display: table;
   }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -193,8 +196,17 @@
   .h-65 {
     height: calc(var(--spacing) * 65);
   }
+  .h-115 {
+    height: calc(var(--spacing) * 115);
+  }
+  .h-137 {
+    height: calc(var(--spacing) * 137);
+  }
   .h-150 {
     height: calc(var(--spacing) * 150);
+  }
+  .h-200 {
+    height: calc(var(--spacing) * 200);
   }
   .h-270 {
     height: calc(var(--spacing) * 270);
@@ -202,8 +214,23 @@
   .h-420 {
     height: calc(var(--spacing) * 420);
   }
+  .h-\[45\] {
+    height: 45;
+  }
   .h-\[95\%\] {
     height: 95%;
+  }
+  .h-\[137\] {
+    height: 137;
+  }
+  .h-\[460px\] {
+    height: 460px;
+  }
+  .h-\[550px\] {
+    height: 550px;
+  }
+  .h-\[800px\] {
+    height: 800px;
   }
   .h-full {
     height: 100%;
@@ -474,9 +501,29 @@
       margin-top: calc(var(--spacing) * 20);
     }
   }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
+  .lg\:hidden {
+    @media (width >= 64rem) {
+      display: none;
+    }
+  }
+  .lg\:h-80 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 80);
+    }
+  }
   .lg\:h-100 {
     @media (width >= 64rem) {
       height: calc(var(--spacing) * 100);
+    }
+  }
+  .lg\:h-113 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 113);
     }
   }
   .lg\:h-150 {
@@ -492,6 +539,16 @@
   .lg\:h-300 {
     @media (width >= 64rem) {
       height: calc(var(--spacing) * 300);
+    }
+  }
+  .lg\:h-\[4\] {
+    @media (width >= 64rem) {
+      height: 4;
+    }
+  }
+  .lg\:h-\[450px\] {
+    @media (width >= 64rem) {
+      height: 450px;
     }
   }
   .lg\:w-\[15\%\] {
@@ -514,19 +571,9 @@
       width: 60%;
     }
   }
-  .lg\:w-\[70\%\] {
-    @media (width >= 64rem) {
-      width: 70%;
-    }
-  }
   .lg\:w-\[75\%\] {
     @media (width >= 64rem) {
       width: 75%;
-    }
-  }
-  .lg\:w-\[705\] {
-    @media (width >= 64rem) {
-      width: 705;
     }
   }
   .lg\:w-full {
